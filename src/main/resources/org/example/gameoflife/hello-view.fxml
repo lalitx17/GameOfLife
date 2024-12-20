@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gameoflife.GameOfLife">
+    <Canvas fx:id="gameCanvas" width="500" height="500" />
+    <Button text="Start Game" onAction="#StartGame"/>
+</VBox>

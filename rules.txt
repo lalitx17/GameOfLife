@@ -1,0 +1,13 @@
+
+RULES OF GAME OF LIFE
+
+
+underpopulation :- any Cell with less than 2 neighbour dies
+
+overpopulation :- any cell with more than 3 neighbour dies
+
+survival :- any cell with 2 or 3 neighbour survives
+
+reproduction :- any cell with 3 neighbor become alive
+
+
