@@ -4,13 +4,19 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gameoflife.GameOfLife">
-    <ScrollPane fx:id="gameScrollPane" fitToWidth="true" fitToHeight="true" style="-fx-background: black;">
-        <Pane fx:id="gamePane" />
-    </ScrollPane>
-    <HBox spacing="10" style="-fx-padding: 10;" layoutY="10.0" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gameoflife.GameOfLife"
+            AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+    <StackPane AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <ScrollPane fx:id="gameScrollPane" fitToWidth="true" fitToHeight="true"
+                    style="-fx-background: white; -fx-border-color: transparent;">
+            <StackPane fx:id="gamePane" style="-fx-background-color: white;"/>
+        </ScrollPane>
+    </StackPane>
+    <HBox spacing="10" style="-fx-padding: 10;" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="10">
         <Button fx:id="zoomInButton" text="+" />
         <Button fx:id="zoomOutButton" text="-" />
     </HBox>
