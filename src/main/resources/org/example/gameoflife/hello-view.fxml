@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.canvas.Canvas?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gameoflife.GameOfLife">
-    <Canvas fx:id="gameCanvas" width="500" height="500" />
-    <Button text="Start Game" onAction="#StartGame"/>
-</VBox>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gameoflife.GameOfLife">
+    <ScrollPane fx:id="gameScrollPane" fitToWidth="true" fitToHeight="true" style="-fx-background: black;">
+        <Pane fx:id="gamePane" />
+    </ScrollPane>
+    <HBox spacing="10" style="-fx-padding: 10;" layoutY="10.0" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10">
+        <Button fx:id="zoomInButton" text="+" />
+        <Button fx:id="zoomOutButton" text="-" />
+    </HBox>
+</AnchorPane>
